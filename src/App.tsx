@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import { useCoffee } from './hooks/useCoffee'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
