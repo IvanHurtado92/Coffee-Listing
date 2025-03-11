@@ -1,14 +1,16 @@
 import "./App.css"
-
-import Banner from './assets/coffee_banner.jpg'
+import { About } from "./components/About"
+import { Hero } from "./components/Hero"
 
 function App() {
   return (
     <>
       <main>
-        <section className="hero">
-          <h1>Coffee Listing</h1>
-          <img src={Banner} alt="Coffee Listing" />
+        <Hero />
+        <section className="content">
+          <About />
+
+          {/* Contenido del Iván */}
         </section>
       </main>
     </>
