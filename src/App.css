@@ -54,3 +54,10 @@ main {
   font-weight: bold;
   font-style: italic;
 }
+
+@media (max-width: 871px) {
+  .hero>h1 {
+    font-size: 4rem;
+    top: 10%;
+  }
+}
