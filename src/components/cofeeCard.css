@@ -1,0 +1,54 @@
+.cofee-card{
+    flex-direction: column;
+    display: flex;
+    width: 400px;
+    height: 300px;
+}
+.imgContainer{
+    height: 70%;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    justify-content: left;
+    padding: 10px 0px 0px 10px;
+}
+.data{
+    height: 30%;
+}
+#cardImage{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+.isPopular{
+    background-color: #F5C768;
+    width: 22%;
+    height: 12%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 5px;
+}
+#price{
+    background-color: #BDE3CB;
+    padding: 2px 3px 2px 3px;
+    width: 14%;
+    height: fit-content !important;
+    border-radius: 3px;
+}
+#reviews{
+    display: flex;
+    justify-content: left;
+}
+#votes{
+    font-weight: lighter;
+    color: gray;
+}
