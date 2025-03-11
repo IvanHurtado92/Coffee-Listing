@@ -55,16 +55,54 @@ main {
   font-style: italic;
 }
 
+.coffees-list {
+  margin: 20px 10px 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em 5em;
+}
+
+.coffee-filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  gap: .5em;
+}
+
+.coffee-filter-container>p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.coffee-filter {
+  font-size: large;
+  font-weight: bold;
+  width: fit-content;
+  padding: .5em 1.2em;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--accent-500);
+  color: var(--background-950);
+
+  transition: color .14s ease-in-out, background-color .14s ease-in-out;
+
+  &:hover {
+    background-color: var(--accent-700);
+    color: var(--text-50);
+  }
+}
+
 @media (max-width: 871px) {
   .hero>h1 {
     font-size: 4rem;
     top: 10%;
   }
-}
-.coofees-list {
-  margin: 20px 10px 20px 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em;
+
+  .coffees-list {
+    align-items: center;
+    flex-direction: column;
+  }
 }

@@ -1,3 +1,4 @@
+import { useState } from "react"
 import "./App.css"
 import { About } from "./components/About"
 import CoffeeCard from "./components/cofeeCard"
@@ -6,6 +7,7 @@ import { useCoffee } from "./hooks/useCoffee"
 
 function App () {
   const coffees = useCoffee()
+  const [onlyAvailable, setOnlyAvailable] = useState(false)
 
   return (
     <>
@@ -13,15 +15,23 @@ function App () {
         <Hero />
         <section className="content">
           <About />
-          <div className="coofees-list">
-          {
-
-            coffees.map((coffee, idx) => (
-              <CoffeeCard key={idx} {...coffee} />
-            ))
-          }
+          <div className="coffee-filter-container">
+            <p>Filters</p>
+            <button
+              className="coffee-filter"
+              onClick={() => setOnlyAvailable(!onlyAvailable)}
+            >
+              Only Available
+            </button>
           </div>
-          {/* Contenido del Iván */}
+          <div className="coffees-list">
+            {
+              coffees.map((coffee, idx) => {
+                if (onlyAvailable && !coffee.available) return
+                return <CoffeeCard key={idx} {...coffee} />
+              })
+            }
+          </div>
         </section>
       </main>
     </>

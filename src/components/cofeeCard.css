@@ -1,66 +1,70 @@
-.cofee-card{
-    flex-direction: column;
-    display: flex;
-    width: calc(50% - 10px);
-    height: 250px;
+.cofee-card {
+  flex-direction: column;
+  display: flex;
+  width: 15rem;
+  height: 250px;
 }
-.imgContainer{
-    height: 70%;
-    background-size: cover;
-    border-radius: 20px;
-    display: flex;
-    justify-content: left;
-    padding: 10px 0px 0px 10px;
+
+.imgContainer {
+  height: 70%;
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  padding: 10px 0px 0px 10px;
 }
-.data{
-    height: 30%;
+
+.data {
+  height: 30%;
 }
-#cardImage{
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
+
+.isPopular {
+  background-color: var(--accent-200);
+  height: fit-content;
+  padding: .2em .5em;
+  border-radius: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background-950);
 }
-.isPopular{
-    /*background-color: #F5C768;*/
-    background-color: var(--accent-200);
-    width: 24%;
-    height: 13%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 5px;
 }
-.product{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 5px;
-    padding: 5px;
+
+#price {
+  background-color: var(--accent-50);
+  padding: 2px 3px 2px 3px;
+  height: fit-content !important;
+  border-radius: 3px;
+  justify-content: center;
+  display: flex;
 }
-#price{
-    /*background-color: #BDE3CB;*/
-    background-color: var(--accent-50);
-    padding: 2px 3px 2px 3px;
-    height: fit-content !important;
-    border-radius: 3px;
-    justify-content: center;
-    display: flex;
+
+#reviews {
+  display: flex;
+  justify-content: left;
 }
-#reviews{
-    display: flex;
-    justify-content: left;
+
+#votes {
+  font-weight: lighter;
+  color: color-mix(in srgb, var(--text-50) 50%, transparent 100%);
 }
-#votes{
-    font-weight: lighter;
-    color: gray;
-}
-.details{
+
+.details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#availability{
-    color: rgb(154, 4, 4);
-    font-weight: bold;
+
+#availability {
+  color: var(--primary-300);
+  font-weight: bold;
 }
