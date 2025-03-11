@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./App.css"
 import { About } from "./components/About"
-import CoffeeCard from "./components/cofeeCard"
+import CoffeeCard from "./components/CoffeeCard"
 import { Hero } from "./components/Hero"
 import { useCoffee } from "./hooks/useCoffee"
 
@@ -28,6 +28,7 @@ function App () {
             {
               coffees.map((coffee, idx) => {
                 if (onlyAvailable && !coffee.available) return
+
                 return <CoffeeCard key={idx} {...coffee} />
               })
             }

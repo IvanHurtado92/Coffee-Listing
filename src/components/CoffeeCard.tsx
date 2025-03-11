@@ -1,4 +1,4 @@
-import './cofeeCard.css'
+import './CoffeeCard.css'
 import { Coffee } from '../models/Coffee'
 
 export function CoffeeCard ({
@@ -23,8 +23,8 @@ export function CoffeeCard ({
           </div>
         </div>
         <div className="details">
-        <p id='reviews'>⭐{rating}<span id='votes'>({votes} votes)</span></p>
-        <p id='availability'>{available ? '' : 'Sold out'}</p>
+          <p id='reviews'>⭐{rating}<span id='votes'>({votes} votes)</span></p>
+          <p id='availability'>{available ? '' : 'Sold out'}</p>
         </div>
       </div>
     </div>
