@@ -13,11 +13,14 @@ function App () {
         <Hero />
         <section className="content">
           <About />
+          <div className="coofees-list">
           {
+
             coffees.map((coffee, idx) => (
               <CoffeeCard key={idx} {...coffee} />
             ))
           }
+          </div>
           {/* Contenido del Iván */}
         </section>
       </main>

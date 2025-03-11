@@ -18,7 +18,7 @@ export function CoffeeCard ({
         <div className="product">
           <p>{name}</p>
           <div id='price'>
-            <p style={{ color: "black" }}>${price}</p>
+            <p style={{ color: "black" }}>{price}</p>
           </div>
         </div>
         <p id='reviews'>⭐{rating}<span id='votes'>({votes} votes)</span></p>

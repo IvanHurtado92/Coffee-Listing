@@ -61,3 +61,10 @@ main {
     top: 10%;
   }
 }
+.coofees-list {
+  margin: 20px 10px 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
