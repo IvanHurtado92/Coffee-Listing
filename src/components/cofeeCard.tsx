@@ -1,32 +1,30 @@
-import React from 'react';
-import './cofeeCard.css';
+import './cofeeCard.css'
+import { Coffee } from '../models/Coffee'
 
-interface CoffeeCardProps {
-    coffeeName: string;
-    price: number;
-    reviews: number;
-    votes: number;
-    disponible: boolean;
-    url?: string;
-}
-
-const CoffeeCard: React.FC<CoffeeCardProps> = ({coffeeName, price, reviews, votes, disponible, url}) => {
-    return (
-        <div className="cofee-card">
-            <div className="imgContainer" style={{backgroundImage: `url(${url})`}}>
-                {disponible && <p className='isPopular'>Popular</p>}
-            </div>
-            <div className="data">
-                <div className="product">
-                    <p>{coffeeName}</p>
-                    <div id='price'>
-                    <p style={{color: "black"}}>${price}</p>
-                    </div>
-                </div>
-                <p id='reviews'>⭐{reviews}<span id='votes'>({votes} votes)</span></p>
-            </div>
+export function CoffeeCard ({
+  available,
+  image,
+  name,
+  price,
+  rating,
+  votes
+}: Coffee) {
+  return (
+    <div className="cofee-card">
+      <div className="imgContainer" style={{ backgroundImage: `url(${image})` }}>
+        {available && <p className='isPopular'>Popular</p>}
+      </div>
+      <div className="data">
+        <div className="product">
+          <p>{name}</p>
+          <div id='price'>
+            <p style={{ color: "black" }}>${price}</p>
+          </div>
         </div>
-    );
+        <p id='reviews'>⭐{rating}<span id='votes'>({votes} votes)</span></p>
+      </div>
+    </div>
+  )
 };
 
-export default CoffeeCard;
+export default CoffeeCard
