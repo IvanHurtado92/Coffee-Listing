@@ -95,14 +95,19 @@ main {
   }
 }
 
-@media (max-width: 871px) {
+@media (width <=875px) {
   .hero>h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     top: 10%;
   }
 
   .coffees-list {
     align-items: center;
     flex-direction: column;
+  }
+
+  .about>p {
+    max-height: 20rem;
+    overflow-y: auto;
   }
 }

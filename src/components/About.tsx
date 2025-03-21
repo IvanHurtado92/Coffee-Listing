@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <article>
+    <article className="about">
       <h2>What is Coffee Listing?</h2>
       <p>
         Welcome to <span>Coffee Listing</span>, your ultimate destination for
