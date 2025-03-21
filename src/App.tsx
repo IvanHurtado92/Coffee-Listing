@@ -5,7 +5,7 @@ import CoffeeCard from "./components/CoffeeCard"
 import { Hero } from "./components/Hero"
 import { useCoffee } from "./hooks/useCoffee"
 
-function App () {
+function App() {
   const coffees = useCoffee()
   const [onlyAvailable, setOnlyAvailable] = useState(false)
 
@@ -13,25 +13,28 @@ function App () {
     <>
       <main>
         <Hero />
-        <section className="content">
+        <section className='content'>
           <About />
-          <div className="coffee-filter-container">
+          <div className='coffee-filter-container'>
             <p>Filters</p>
             <button
-              className="coffee-filter"
+              className='coffee-filter'
               onClick={() => setOnlyAvailable(!onlyAvailable)}
             >
               Only Available
             </button>
           </div>
-          <div className="coffees-list">
-            {
-              coffees.map((coffee, idx) => {
-                if (onlyAvailable && !coffee.available) return
+          <div className='coffees-list'>
+            {coffees.map((coffee, idx) => {
+              if (onlyAvailable && !coffee.available) return
 
-                return <CoffeeCard key={idx} {...coffee} />
-              })
-            }
+              return (
+                <CoffeeCard
+                  key={idx}
+                  {...coffee}
+                />
+              )
+            })}
           </div>
         </section>
       </main>

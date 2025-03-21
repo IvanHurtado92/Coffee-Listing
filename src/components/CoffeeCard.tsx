@@ -1,34 +1,40 @@
-import './CoffeeCard.css'
-import { Coffee } from '../models/Coffee'
+import "./CoffeeCard.css"
+import { Coffee } from "../models/Coffee"
 
-export function CoffeeCard ({
+export function CoffeeCard({
   popular,
   image,
   name,
   price,
   rating,
   votes,
-  available
+  available,
 }: Coffee) {
   return (
-    <div className="cofee-card">
-      <div className="imgContainer" style={{ backgroundImage: `url(${image})` }}>
+    <div className='cofee-card'>
+      <div
+        className='imgContainer'
+        style={{ backgroundImage: `url(${image})` }}
+      >
         {popular && <p className='isPopular'>Popular</p>}
       </div>
-      <div className="data">
-        <div className="product">
+      <div className='data'>
+        <div className='product'>
           <p>{name}</p>
           <div id='price'>
             <p style={{ color: "black" }}>{price}</p>
           </div>
         </div>
-        <div className="details">
-          <p id='reviews'>⭐{rating}<span id='votes'>({votes} votes)</span></p>
-          <p id='availability'>{available ? '' : 'Sold out'}</p>
+        <div className='details'>
+          <p id='reviews'>
+            ⭐{rating}
+            <span id='votes'>({votes} votes)</span>
+          </p>
+          <p id='availability'>{available ? "" : "Sold out"}</p>
         </div>
       </div>
     </div>
   )
-};
+}
 
 export default CoffeeCard
